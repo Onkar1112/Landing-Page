@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main img{
+    height: 700px;
+    width: 510px;
+    position: relative;
+    z-index: 99;
+    object-fit: cover;
+}
+#scroll-div{
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    /* height: 100%; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroll-div::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div h1{
+    display: inline-block;
+    font-size: 160px;
+    font-family:Helvetica, Arial, sans-serif;
+    margin-right: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-div2{
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    z-index: 100;
+    /* height: 100%; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroll-div2::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div2 h1{
+    display: inline-block;
+    font-size: 160px;
+    font-family:Helvetica, Arial, sans-serif;
+    margin-right: 30px;
+    letter-spacing: 3px;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroll-div3{
+    position: absolute;
+    top: 64%;
+    width: 100%;
+    /* height: 100%; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroll-div3::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div3 h1{
+    display: inline-block;
+    font-size: 160px;
+    font-family:Helvetica, Arial, sans-serif;
+    margin-right: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#text{
+    font-size: 33px;
+    position: absolute;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 60%;
+    /* background-color: red; */
+    z-index: 99;
+    top: 15%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@keyframes scroll{
+    0%{
+        
+        transform: translateX(calc(-100% - 32px));
+
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
